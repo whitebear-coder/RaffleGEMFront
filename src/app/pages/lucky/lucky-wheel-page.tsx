@@ -60,7 +60,7 @@ export function LuckyWheelPage() {
         const result = await randomRaffle(strategyId);
         const {code, info, data} = await result.json();
         if (code != "0000") {
-            window.alert("获取抽奖奖品列表失败 code:" + code + " info:" + info)
+            window.alert("随机抽奖失败 code:" + code + " info:" + info)
             return;
         }
         // 为了方便测试，mock 的接口直接返回 awardIndex 也就是奖品列表中第几个奖品。
