@@ -8,8 +8,14 @@ import {queryRaffleAwardList, randomRaffle} from '@/apis'
 import {RaffleAwardVO} from "@/types/RaffleAwardVO";
 
 export function LuckyWheelPage() {
-    const queryParams = new URLSearchParams(window.location.search);
-    const strategyId = Number(queryParams.get('strategyId'));
+    const [strategyId, setStrategyId] = useState<number>();
+    // 完善代码
+    useEffect(() => {
+        const queryParams = new URLSearchParams(window.location.search);
+        const strategyIdFromQuery = Number(queryParams.get('strategyId'));
+        setStrategyId(strategyIdFromQuery);
+    }, []);
+
     const [prizes, setPrizes] = useState([{}])
     const myLucky = useRef()
 
