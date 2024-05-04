@@ -1,1 +1,1 @@
-docker build -t fuzhengwei/big-market-front-app:1.6 .
+docker build -t fuzhengwei/big-market-front-app:1.7 .
