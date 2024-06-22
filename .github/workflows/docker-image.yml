@@ -21,11 +21,7 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-      
-    - name: Login to DockerAlibaba
-      run: |
-        docker login --username=${{ secrets.ALIYUN_REGISTRY_USER }} --password=${{ secrets.ALIYUN_REGISTRY_PASSWORD }} registry.cn-hangzhou.aliyuncs.com      
-
+        
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1   
       
@@ -39,15 +35,5 @@ jobs:
         load: ${{ github.event_name == 'pull_request' }} # 加载镜像到本地Docker环境
         tags: |
             fuzhengwei/big-market-front-app:3.0
-            fuzhengwei/big-market-front-app:latest   
-
-    - name: Tag image for Alibaba Cloud
-      run: |
-        docker tag fuzhengwei/big-market-front-app:3.0 registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-front-app:3.0
-        docker tag fuzhengwei/big-market-front-app:latest registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-front-app:latest
-
-    - name: Push to Alibaba Cloud Container Registry
-      run: |
-        docker push registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-front-app:3.0
-        docker push registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-front-app:latest
+            fuzhengwei/big-market-front-app:latest
         
