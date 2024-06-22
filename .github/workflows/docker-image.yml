@@ -36,6 +36,7 @@ jobs:
         file: ./Dockerfile
         platforms: linux/amd64
         push: ${{ github.event_name != 'pull_request' }}
+        load: ${{ github.event_name == 'pull_request' }} # 加载镜像到本地Docker环境
         tags: |
             fuzhengwei/big-market-front-app:3.0
             fuzhengwei/big-market-front-app:latest   
