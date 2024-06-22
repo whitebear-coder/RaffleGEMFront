@@ -42,11 +42,11 @@ jobs:
 
     - name: Tag image for Alibaba Cloud
       run: |
-        docker tag fuzhengwei/big-market-font-app:3.0 registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-app:3.0
-        docker tag fuzhengwei/big-market-font-app:latest registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-app:latest
+        docker tag fuzhengwei/big-market-front-app:3.0 registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-front-app:3.0
+        docker tag fuzhengwei/big-market-front-app:latest registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-front-app:latest
 
     - name: Push to Alibaba Cloud Container Registry
       run: |
-        docker push registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-font-app:3.0
-        docker push registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-font-app:latest
+        docker push registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-front-app:3.0
+        docker push registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-front-app:latest
         
