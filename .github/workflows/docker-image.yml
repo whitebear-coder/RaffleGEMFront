@@ -34,4 +34,19 @@ jobs:
         push: ${{ github.event_name != 'pull_request' }}
         tags: |
             fuzhengwei/big-market-front-app:3.0
-            fuzhengwei/big-market-front-app:latest    
+            fuzhengwei/big-market-front-app:latest   
+
+    - name: Login to DockerAlibaba
+      run: |
+        docker login --username=${{ secrets.ALIYUN_REGISTRY_USER }} --password=${{ secrets.ALIYUN_REGISTRY_PASSWORD }} registry.cn-hangzhou.aliyuncs.com      
+
+    - name: Tag image for Alibaba Cloud
+      run: |
+        docker tag fuzhengwei/big-market-font-app:3.0 registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-app:3.0
+        docker tag fuzhengwei/big-market-font-app:latest registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-app:latest
+
+    - name: Push to Alibaba Cloud Container Registry
+      run: |
+        docker push registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-font-app:3.0
+        docker push registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-font-app:latest
+        
