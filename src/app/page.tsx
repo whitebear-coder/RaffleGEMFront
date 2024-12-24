@@ -21,10 +21,10 @@ export default function Home() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-[#e7305e]"
-             style={{backgroundImage: "url('/background.svg')"}}>
+             style={{backgroundImage: "url('/raffle-gem-background.jpeg')"}}>
             {/* 头部文案 */}
             <header className="text-7xl font-bold text-center text-gray-800 my-8" style={{color: "white"}}>
-                大营销平台 - 抽奖展示
+                G.E.M 邓紫棋世界巡回演唱会 周边抽奖
             </header>
 
             {/* 会员卡 */}
@@ -56,8 +56,8 @@ export default function Home() {
 
             {/* 底部文案 */}
             <footer className="text-gray-600 text-center my-8" style={{color: "white"}}>
-                本项目为 星球「码农会锁」第8个实战项目 <a href='https://gaga.plus'
-                                                        target='_blank' color={"#0092ff"}>https://gaga.plus</a> @小傅哥
+                欢迎回到棋士之家！ <a href='https://gaga.plus'
+                                                        target='_blank' color={"#0092ff"}></a>
             </footer>
         </div>
     );

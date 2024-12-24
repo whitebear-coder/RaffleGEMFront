@@ -117,7 +117,7 @@ export function MemberCard({allRefresh}) {
                 <div className="md:flex">
                     <div className="p-8 flex-1">
                         <a href="#"
-                           className="block mt-1 text-2xl leading-tight font-semibold text-white hover:text-gray-300 transition duration-300 ease-in-out">营销会员卡</a>
+                           className="block mt-1 text-2xl leading-tight font-semibold text-white hover:text-gray-300 transition duration-300 ease-in-out">棋士币</a>
                         <div className="mt-4">
                             <p className="text-lg text-gray-100 flex items-center">
                                 <span className="material-icons mr-2">💰</span>

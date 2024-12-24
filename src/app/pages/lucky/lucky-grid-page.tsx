@@ -33,7 +33,7 @@ export function LuckyGridPage({handleRefresh}) {
                 x: 0,
                 y: 0,
                 fonts: [{text: data[0].awardTitle, top: '80%', fontSize: '12px', fontWeight: '800'}],
-                imgs: [{src: "/raffle-award-00.png", width: "100px", height: "100px", activeSrc: "/raffle-award.png"}]
+                imgs: [{src: "/raffle-gem-ticket.png", width: "100px", height: "100px", activeSrc: "/raffle-gem-ticket.png"}]
             },
             {
                 x: 1,
@@ -134,12 +134,61 @@ export function LuckyGridPage({handleRefresh}) {
 
     const [buttons] = useState([
         {
+            x: 0,
+            y: 0,
+            background: "#7f95d1",
+            shadow: '3',
+            imgs: [{src: "/raffle-gem-ticket.png", width: "100px", height: "100px"}]
+        },
+        {
+            x: 0,
+            y: 1,
+            background: "#7f95d1",
+            shadow: '3',
+            imgs: [{src: "/raffle-gem-bag.jpg", width: "100px", height: "100px"}]
+        },
+        {
+            x: 0,
+            y: 2,
+            background: "#7f95d1",
+            shadow: '3',
+            imgs: [{src: "/raffle-gem-calendar.jpg", width: "100px", height: "100px"}]
+        },
+        {
+            x: 1,
+            y: 0,
+            background: "#7f95d1",
+            shadow: '3',
+            imgs: [{src: "/raffle-gem-cat.jpg", width: "100px", height: "100px"}]
+        },
+        {
             x: 1,
             y: 1,
             background: "#7f95d1",
             shadow: '3',
             imgs: [{src: "/raffle-button.png", width: "100px", height: "100px"}]
-        }
+        },
+        {
+            x: 1,
+            y: 2,
+            background: "#7f95d1",
+            shadow: '3',
+            imgs: [{src: "/raffle-gem-mirror.jpg", width: "100px", height: "100px"}]
+        },
+        {
+            x: 2,
+            y: 0,
+            background: "#7f95d1",
+            shadow: '3',
+            imgs: [{src: "/raffle-gem-mock.jpg", width: "100px", height: "100px"}]
+        },
+        {
+            x: 2,
+            y: 1,
+            background: "#7f95d1",
+            shadow: '3',
+            imgs: [{src: "/raffle-gem-photo.jpg", width: "100px", height: "100px"}]
+        },
     ])
 
     const [defaultStyle] = useState([{background: "#b8c5f2"}])

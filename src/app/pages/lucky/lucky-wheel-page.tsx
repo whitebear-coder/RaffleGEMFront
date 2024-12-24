@@ -22,7 +22,7 @@ export function LuckyWheelPage({handleRefresh}) {
         {
             radius: '30%', background: '#869cfa',
             pointer: true,
-            fonts: [{text: '开始', top: '-10px'}]
+            fonts: [{text: '抽奖开始', top: '-10px'}]
         }
     ])
 
